@@ -11,8 +11,8 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
     <title>Frontend Mentor | Todo app</title>
 
@@ -33,43 +33,52 @@
     </header>
 
     <main>
-      <div id='heading'>
+      <section id='heading'>
         <h1>TODO</h1>
-        <span id=theme><img id=principalImage src="../images/icon-sun.svg" alt="change theme"/></span>
-      </div>
+        <a id=theme onclick="Theme.icon()"><img id=principalImage src="../images/icon-sun.svg" alt="change theme"/></a>
+      </section>
       
       <section id=todo>
         <div class="card input">
-          <input type="text" placeholder="Create a new todo" />
+          <div>
+            <span><div class='circle'></div></span>
+            <input type="text" placeholder="Create a new todo" />
+          </div>
         </div>
       </section>
 
       <section id=allTodo>
         <ul>
           <li class="card">
-            <div class='circle'></div>
-            <p>complete online javaScript course</p>
+            <div>
+              <span><div class='circle'></div></span>
+              <p>Complete online JavaScript course</p>
+            </div>
             <span><img src="../images/icon-cross.svg" alt=""></span>
           </li>
-            
-          
         </ul>
-      </section>
-        
-      
-      <section>
-        <!-- Add dynamic number -->
-        items left All Active Completed Clear Completed
+        <div class="functions">
+          <p>1 items left</p><!-- Add dynamic number -->
+          <div id=select>
+            <a>All</a> 
+            <a>Active</a> 
+            <a>Completed</a> 
+          </div>
+          <div id=clear>
+            <a>Clear</a>
+            <a>Completed</a>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer>Drag and drop to reorder list</footer>
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Mateus Lima</a>.
     </div>
+    <script src="../scripts/index.js"></script>
   </body>
 </html>

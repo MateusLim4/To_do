@@ -1,6 +1,6 @@
 :root{
     --bright-blue: hsl(220, 98%, 61%);
-    --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    --check-background: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
     
     /*Light theme*/
     --Very-Light-Gray: hsl(0, 0%, 98%);
@@ -25,7 +25,7 @@
     margin: 0;
     font-size: 18px;
     font-family: 'Josefin Sans', sans-serif;
-    color: white;
+    color: var(--Light-Grayish-Blue);
 }
 
 /*  HEADER ----------------------------------------*/
@@ -48,9 +48,9 @@ header img{
 
 /* MAIN ------------------------------------------*/
 main{
-    width: 50%;
+    width: 45%;
     margin: auto;
-    min-width: 700px;
+    min-width: 500px;
 }
 
 #heading{
@@ -64,6 +64,7 @@ main{
 #heading h1{
     font-size: 3em;
     letter-spacing: 1rem;
+    color: white;
 }
 
 #heading img{
@@ -78,18 +79,33 @@ main{
 
 .card{
     width: 100%;
+    padding: 1rem 2rem;
     height: 4.5rem;
-    border-radius: 0.35rem;
     background: var(--Very-Dark-Desaturated-Blue);
     display: flex;
     align-items: center;
-    font-weight: normal;
-    letter-spacing: 1px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1.5px var(--Very-Dark-Grayish-Blue);
+}
+
+.card.input{
+    border: none;
+}
+
+.card p{
+    font-size: 20px;
+}
+
+.card div{
+    display: flex;
+    align-items: center;
 }
 
 .input{
     margin-bottom: 2rem;  
     box-shadow: 1px 1px 6px var(--Very-Dark-Grayish-Blue1); 
+    border-radius: 0.35rem;
 }
 
 .card input{
@@ -99,9 +115,59 @@ main{
     border: none;
     outline: none;
     margin: auto;
+    font-size: 25px;
+    font-weight: 400;
 }
 
-ul div{
+ul .card:first-child{
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.circle{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 1rem;
+    border: 2px solid var(--Very-Dark-Grayish-Blue); 
+    margin-right: 1.5rem;
+}
+
+.circle:hover{
+    cursor: pointer;
+    
+}
+
+/* FUNCTIONS -----------------------------------------*/
+.functions{
+    width: 100%;
+    padding: 1rem 2rem;
+    height: 3rem;
+    background: var(--Very-Dark-Desaturated-Blue);
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.functions a, .functions p{
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+#select{
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+}
+
+#select a:hover, #clear a:hover{
+    cursor: pointer;
+    color: var(--Light-Grayish-Blue-hover);
+}
+
+
+#clear{
+    text-align: right;
+}
+
+#select a::marker{
+    color:var(--bright-blue)
 }
